@@ -1,24 +1,23 @@
+import { TextTopBanner } from "./TextTopBanner";
 import "./topBanner.scss";
 
-export const TopBanner = () => {
+export const TopBanner = ({ setCloseTopBanner }) => {
+  const closeTopBanner = () => {
+    setCloseTopBanner(false);
+  };
+
   return (
-    <div id="topBanner">
+    <>
       <img src="../../../public/images/topBanner.png" alt="Подарок" />
-      <div className="topBanner__text">
-        <p>Black Friday, 24-27 Nov</p>
-        <p>
-          <span>10%OFF</span>
-        </p>
-        <p>
-          Use code <span>10FRIDAY</span> at checkou
-        </p>
-      </div>
+      <TextTopBanner />
       <div className="topBanner__button">
         <button className="topBanner__button-shop">Shop now</button>
-        <button className="topBanner__button-close">
-          <img src="../../../public/images/Close.svg" alt="X" />
-        </button>
+        <button
+          className="topBanner__button-close"
+          onClick={() => closeTopBanner()}
+        ></button>
+        <button className="topBanner__button-next-mobile"></button>
       </div>
-    </div>
+    </>
   );
 };
