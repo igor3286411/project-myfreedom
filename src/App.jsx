@@ -33,7 +33,6 @@ const App = () => {
           setCloseBottomBanner={setCloseBottomBanner}
         />
       )}
-      <div style={{ height: "1500px" }}></div>
     </div>
   );
 };
