@@ -1,0 +1,109 @@
+#topBanner {
+    margin-top: 54px;
+    background: linear-gradient(180deg, #101010 0%, #0B0B0B 100%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 22px 0 8px;
+    position: relative;
+
+    @media(max-width:450px) {
+        height: 54px;
+        justify-content: flex-end;
+    }
+
+    img {
+        @media(max-width:1000px) {
+            width: 185px;
+            height: 54px;
+        }
+
+        @media(max-width:450px) {
+            position: absolute;
+            width: 159px;
+            height: 54px;
+            left: -31px;
+        }
+    }
+
+
+    .topBanner__text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 27px;
+
+        @media(max-width:1000px) {
+            gap: 15px;
+        }
+
+        p {
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 20px;
+            letter-spacing: 0.048px;
+
+            & span {
+                color: #D7A830;
+            }
+        }
+    }
+
+    .topBanner__button {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+
+        &-shop {
+            display: flex;
+            padding: 10px 14px;
+            align-items: center;
+            height: 34px;
+            gap: 10px;
+            border-radius: 14px;
+            backdrop-filter: blur(12px);
+            color: #0B0B0B;
+            text-shadow: 0px 0px 30px rgba(102, 204, 255, 0.20);
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 110%;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgb(206, 204, 204);
+                transition: .2s;
+            }
+
+            @media(max-width:720px) {
+                display: none;
+            }
+        }
+
+        &-close {
+            cursor: pointer;
+            border: none;
+            height: 24px;
+            width: 24px;
+            background: url('../../../public/images/Close.svg');
+
+            @media(max-width:1000px) {
+                display: none;
+            }
+
+        }
+
+        &-next-mobile {
+            cursor: pointer;
+            border: none;
+            height: 24px;
+            width: 24px;
+            background: url('../../../public/images/menu-icon.svg');
+            display: none;
+
+            @media(max-width:720px) {
+                display: block;
+
+            }
+        }
+    }
+}

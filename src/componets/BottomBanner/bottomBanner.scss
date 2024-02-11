@@ -1,0 +1,108 @@
+#bottomBanner {
+    position: fixed;
+    bottom: 40px;
+    width: 600px;
+    height: 349px;
+    right: 94px;
+    background-image: url('../../../public/images/bottomBanner.png');
+    box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.45);
+    border-radius: 16px;
+    padding: 60px 35px 55px 320px;
+    text-align: center;
+
+    @media(max-width:1000px) {
+        right: 17px;
+        bottom: 20px;
+    }
+
+    @media(max-width:700px) {
+        right: 0;
+        bottom: 0;
+    }
+
+    @media(max-width:600px) {
+        border-radius: 0px;
+        background-color: black;
+    }
+
+
+    h2 {
+        color: #FFF;
+        font-size: 46px;
+        font-weight: 500;
+        line-height: 110%;
+        letter-spacing: -1.84px;
+        margin-bottom: 25px;
+    }
+
+    h3 span {
+        color: #d2981a99;
+        background: linear-gradient(to right, #7D5317, #EDDF95, );
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 110%;
+        letter-spacing: -1.6px;
+        ;
+    }
+
+    p {
+        color: #6C6C70;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 130%;
+        letter-spacing: 0.08px;
+        margin: 14px 0 35px;
+
+        span {
+            color: #D7A830;
+
+        }
+    }
+
+    button {
+        display: inline-flex;
+        padding: 12px 24px;
+        align-items: flex-start;
+        gap: 10px;
+        border-radius: 14px;
+        opacity: 0.9;
+        background: rgba(255, 255, 255, 0.10);
+        color: #FFF;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 110%;
+        letter-spacing: 0.08px;
+        cursor: pointer;
+        border: none;
+
+        &:hover {
+            background-color: rgb(45, 44, 44);
+            transition: .2s;
+        }
+
+    }
+
+
+    .bottomBanner__close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        background-image: url('../../../public/images/Close.svg');
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+    }
+}
+
+#bottomBanner.open {
+    opacity: 1;
+    transition: 1s;
+}
+
+#bottomBanner.close {
+    opacity: 0;
+    transition: 1s;
+}
